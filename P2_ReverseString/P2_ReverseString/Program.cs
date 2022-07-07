@@ -6,13 +6,19 @@ namespace P2_ReverseString // Note: actual namespace depends on the project name
     {
         static void Main(string[] args)
         {
-            String word;
-            String reverseWord;
-            
+            String word = " ";
+            String reverseWord = " ";
+
             Console.WriteLine("Let's play! Enter a word and we will reverse it for you. ");
             word = Console.ReadLine();
+            reverseWord = word;
 
-            Console.WriteLine($"You wrote {word[1]}");
+            for (int count = word.Length -1; count >= 0; count--)
+            {
+                reverseWord = reverseWord + reverseWord[count];
+            }
+
+            Console.WriteLine($"You wrote {reverseWord}");
         }
     }
 }
